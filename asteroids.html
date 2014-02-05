@@ -2,11 +2,9 @@
 <html>
 <head>
     <title>Asteroids</title>
-</head>
-<body>
-    <canvas width="500" height="500"></canvas>
 
     <script type="text/javascript" src="http://underscorejs.org/underscore.js"></script>
+    <script src="keymaster.js"></script>
     <script type="text/javascript" charset="utf-8">
       Function.prototype.inherits = function(parent){
         function Surrogate(){};
@@ -16,14 +14,19 @@
     </script>
     <script type="text/javascript" src="moving_object.js" charset="utf-8"></script>
     <script type="text/javascript" src="asteroid.js" charset="utf-8"></script>
+    <script type="text/javascript" src="ship.js" charset="utf-8"></script>
     <script type="text/javascript" src="game.js" charset="utf-8"></script>
-    <script>
-        var canvas = document.getElementsByTagName("canvas")[0];
-        var ctx = canvas.getContext('2d');
-        var game = new Asteroids.Game(ctx);
-        game.start();
+</head>
+<body>
 
-        // new Circles.Game(1000, 1000, 1000).start(canvas);
-    </script>
+  <canvas width="500" height="500"></canvas>
+
+  <script>
+      var canvas = document.getElementsByTagName("canvas")[0];
+      var ctx = canvas.getContext('2d');
+      var game = new Asteroids.Game(ctx);
+      game.start();
+  </script>
+
 </body>
 </html>

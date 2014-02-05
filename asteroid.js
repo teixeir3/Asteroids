@@ -1,8 +1,8 @@
 (function(root) {
   var Asteroids = root.Asteroids = (root.Asteroids || {})
 
-  var COLOR = "black"
-  var RAD = 40
+  var COLOR = "lightblue";
+  var RAD = 20;
 
   var Asteroid = Asteroids.Asteroid = function(pos, vel) {
     Asteroids.MovingObject.call(this, pos, vel, RAD, COLOR);
@@ -12,7 +12,7 @@
   Asteroid.inherits(Asteroids.MovingObject);
 
   var randomAsteroid = Asteroids.randomAsteroid = function(dimx, dimy){
-    var x = Math.floor(Math.random() * dimx);
+    var x = [0, dimx][Math.floor(Math.random()*2)];
     var y = Math.floor(Math.random() * dimy);
     var vel = randomVel();
 
