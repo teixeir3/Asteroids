@@ -1,5 +1,5 @@
 (function(root){
-  Asteroids = root.Asteroids = (root.Asteroids || {});
+  var Asteroids = root.Asteroids = (root.Asteroids || {});
 
   var RADIUS = 10;
   var COLOR = "red";
@@ -12,6 +12,17 @@
 
   }
   Ship.inherits(Asteroids.MovingObject);
+
+  Ship.prototype.fireBullet = function() {
+    var bulletPos = [this.pos[0], this.pos[1]];
+    var bulletMag = this.vel.mag + 5;
+
+    var bulletVel = {dx: this.vel.dx, dy: this.vel.dy, mag: bulletMag};
+
+
+
+    return new Asteroids.Bullet(bulletPos, bulletVel);
+  }
 
   Ship.prototype.power = function() {
     this.vel.mag += DELTA_MAG;

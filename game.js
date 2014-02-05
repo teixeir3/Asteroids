@@ -12,6 +12,7 @@
     this.ctx = ctx;
     this.asteroids = this.addAsteroids(ASTR_CNT);
     this.ship = new Asteroids.Ship();
+    this.bullets = [];
   }
 
   Game.prototype.addAsteroids = function(numAsteroids) {
@@ -30,6 +31,10 @@
     this.ctx.fillRect(0,0, DIM_X, DIM_Y);
 
     this.ship.draw(this.ctx);
+
+    for (i = 0; i < this.bullets.length; i++) {
+      this.bullets[i].draw(this.ctx);
+    }
 
     for (i = 0; i < this.asteroids.length; i++) {
       this.asteroids[i].draw(this.ctx);
@@ -55,6 +60,11 @@
   Game.prototype.move = function() {
 
     this.ship.move();
+
+    for (i = 0; i < this.bullets.length; i++) {
+      this.bullets[i].move();
+    }
+
     for (i = 0; i < this.asteroids.length; i++) {
       this.asteroids[i].move();
     }
@@ -73,10 +83,16 @@
   }
 
   Game.prototype.bindKeyHandlers = function() {
+    var game = this;
     key("up", this.ship.power.bind(this.ship));
     key("down", this.ship.brake.bind(this.ship));
     key("left", this.ship.turnLeft.bind(this.ship));
     key("right", this.ship.turnRight.bind(this.ship));
+    key("space", game.fireBullet.bind(game));
+  }
+
+  Game.prototype.fireBullet = function() {
+    this.bullets.push(this.ship.fireBullet());
   }
 
 })(this);
