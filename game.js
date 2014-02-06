@@ -26,7 +26,6 @@
   }
 
   Game.prototype.draw = function() {
-    // this.ctx.clearRect(0, 0, DIM_X, DIM_Y);
     this.ctx.fillStyle = "black";
     this.ctx.fillRect(0,0, DIM_X, DIM_Y);
 
