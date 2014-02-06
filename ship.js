@@ -14,7 +14,7 @@
   Ship.inherits(Asteroids.MovingObject);
 
   Ship.prototype.fireBullet = function() {
-    var bulletPos = [this.pos[0], this.pos[1]];
+    var bulletPos = [this.pos[0] + this.vel.dx*RADIUS, this.pos[1] + this.vel.dy*RADIUS];
     var bulletMag = this.vel.mag + 5;
 
     var bulletVel = {dx: this.vel.dx, dy: this.vel.dy, mag: bulletMag};
