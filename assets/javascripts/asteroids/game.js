@@ -1,4 +1,7 @@
+//= require asteroid
+
 (function(root) {
+
   var Asteroids = root.Asteroids = (root.Asteroids || {});
 
   var DIM_Y = Asteroids.DIM_Y = 500;
