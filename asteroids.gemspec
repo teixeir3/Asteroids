@@ -1,9 +1,10 @@
 $:.push File.expand_path("../lib", __FILE__)
 
-# Maintain your gem's version:
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
 require "asteroids/version"
 
-# Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "asteroids"
   s.version     = Asteroids::VERSION

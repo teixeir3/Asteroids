@@ -83,4 +83,3 @@ module Asteroids
 end
 
 Bootstrap.load!
-
