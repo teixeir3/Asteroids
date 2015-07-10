@@ -1,7 +1,7 @@
-//= require ./asteroids/keymaster
-//= require ./asteroids/inherits
-//= require ./asteroids/moving_object
-//= require ./asteroids/asteroid
-//= require ./asteroids/ship
-//= require ./asteroids/bullet
-//= require ./asteroids/game
+//= require keymaster
+//= require inherits
+//= require moving_object
+//= require asteroid
+//= require ship
+//= require bullet
+//= require game
