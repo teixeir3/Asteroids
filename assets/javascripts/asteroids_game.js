@@ -5,3 +5,9 @@
 //= require ./asteroids/ship
 //= require ./asteroids/bullet
 //= require ./asteroids/game
+
+(function(root) {
+
+  var Asteroids = root.Asteroids = (root.Asteroids || {});
+
+})(this);

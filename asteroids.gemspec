@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Douglas Teixeira"]
   s.email       = ["teixeir3@gmail.com"]
   s.homepage    = "http://www.DougTeixeira.com/asteroids"
-  s.summary     = "TODO: Summary of Asteroids."
-  s.description = "TODO: Description of Asteroids."
+  s.summary     = "Javascript version of class Asteroids game. Designed to be included in the rails asset pipeline."
+  s.description = "Javascript version of class Asteroids game. Designed to be included in the rails asset pipeline."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
