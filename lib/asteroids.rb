@@ -31,6 +31,10 @@ module Asteroids
     def javascripts_path
       File.join assets_path, 'javascripts'
     end
+    
+    def sprockets_path
+      File.join assets_path, 'javascripts/asteroids'
+    end
 
     def assets_path
       @assets_path ||= File.join gem_path, 'assets'
@@ -78,6 +82,7 @@ module Asteroids
       Sprockets.append_path(stylesheets_path)
       Sprockets.append_path(fonts_path)
       Sprockets.append_path(javascripts_path)
+      Sprockets.append_path(sprockets_path)
     end
   end
 end
