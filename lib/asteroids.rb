@@ -1,4 +1,5 @@
 require 'asteroids/version'
+# require 'asteroids/engine'
 
 module Asteroids
   class << self
