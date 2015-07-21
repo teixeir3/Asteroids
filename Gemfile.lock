@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    asteroids (1.9.1)
+    asteroids (1.9.2)
       autoprefixer-rails
       rails (~> 4.2.1)
       sass
