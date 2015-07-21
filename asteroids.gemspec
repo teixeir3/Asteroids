@@ -18,20 +18,20 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.2.1"
 
   s.add_runtime_dependency 'sass'
-  s.add_runtime_dependency 'autoprefixer-rails', '>= 5.0.0.1'
+  s.add_runtime_dependency 'autoprefixer-rails'
 
   # Testing dependencies
-  s.add_development_dependency 'minitest', '~> 5.4.0'
-  s.add_development_dependency 'minitest-reporters', '~> 1.0.5'
+  s.add_development_dependency 'minitest'
+  s.add_development_dependency 'minitest-reporters'
   # Integration testing
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'poltergeist'
   # Dummy Rails app dependencies
-  s.add_development_dependency 'actionpack', '>= 4.1.5'
-  s.add_development_dependency 'activesupport', '>= 4.1.5'
-  s.add_development_dependency 'json', '>= 1.8.1'
-  s.add_development_dependency 'sprockets-rails', '>= 2.1.3'
-  s.add_development_dependency 'jquery-rails', '>= 3.1.0'
+  s.add_development_dependency 'actionpack'
+  s.add_development_dependency 'activesupport'
+  s.add_development_dependency 'json'
+  s.add_development_dependency 'sprockets-rails'
+  s.add_development_dependency 'jquery-rails'
   s.add_development_dependency 'slim-rails'
   s.add_development_dependency 'uglifier'
   # Converter
