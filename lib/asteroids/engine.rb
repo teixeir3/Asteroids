@@ -3,7 +3,7 @@ module Asteroids
     class Engine < ::Rails::Engine
       initializer 'asteroids.assets.precompile' do |app|
         %w(javascripts asteroids javascripts/asteroids).each do |sub|
-          app.config.assets.paths << root.join('assets', sub).to_s
+          app.config.assets.paths << root.join('vendor', 'assets', sub).to_s
         end
       end
     end
