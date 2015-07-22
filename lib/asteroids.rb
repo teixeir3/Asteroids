@@ -88,4 +88,4 @@ module Asteroids
   end
 end
 
-Bootstrap.load!
+Asteroids.load!
