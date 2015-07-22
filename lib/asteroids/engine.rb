@@ -6,3 +6,4 @@ module Asteroids
       end
     end
   end
+end
