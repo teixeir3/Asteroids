@@ -86,15 +86,17 @@
 
   Game.prototype.bindKeyHandlers = function() {
     var game = this;
-    key("up", this.ship.power.bind(this.ship));
-    key("down", this.ship.brake.bind(this.ship));
-    key("left", this.ship.turnLeft.bind(this.ship));
-    key("right", this.ship.turnRight.bind(this.ship));
-    key("space", game.fireBullet.bind(game));
+    key("up", function(){ this.ship.power.bind(this.ship); return false;});
+    key("down", function(){ this.ship.brake.bind(this.ship); return false;});
+    key("left", function(){ this.ship.turnLeft.bind(this.ship); return false;});
+    key("right", function(){ this.ship.turnRight.bind(this.ship); return false;});
+    key("space", function(){ game.fireBullet.bind(game); return false;});
   }
 
   Game.prototype.fireBullet = function() {
     this.bullets.push(this.ship.fireBullet());
+    
+    return false;
   }
 
   Game.prototype.clearBullets = function() {

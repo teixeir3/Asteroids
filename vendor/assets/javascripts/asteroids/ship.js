@@ -26,11 +26,15 @@
 
   Ship.prototype.power = function() {
     this.vel.mag += DELTA_MAG;
+    
+    return false;
   };
 
   Ship.prototype.brake = function() {
-    // TODO: may want to limit braking later.
+    // TODO: may want to limit braking to disable braking backwards.
     this.vel.mag -= DELTA_MAG;
+    
+    return false;
   }
 
   Ship.prototype.turnLeft = function() {
@@ -45,6 +49,8 @@
     angle -= DELTA_TURN;
     this.vel.dx = Math.cos(angle);
     this.vel.dy = Math.sin(angle);
+    
+    return false;
   }
 
   Ship.prototype.turnRight = function() {
@@ -59,6 +65,8 @@
     angle += DELTA_TURN;
     this.vel.dx = Math.cos(angle);
     this.vel.dy = Math.sin(angle);
+    
+    return false;
   }
 
   Ship.prototype.draw = function(ctx) {
