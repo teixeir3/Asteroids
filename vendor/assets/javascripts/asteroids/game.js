@@ -7,8 +7,6 @@
   var FPS = 30;
   var ASTR_CNT = 10;
 
-  // Actually seconds / frame..
-
   var Game = Asteroids.Game = function(ctx) {
     this.ctx = ctx;
     this.asteroids = this.addAsteroids(ASTR_CNT);
@@ -86,11 +84,14 @@
 
   Game.prototype.bindKeyHandlers = function() {
     var game = this;
-    key("up", function(){ this.ship.power.bind(this.ship); return false;});
-    key("down", function(){ this.ship.brake.bind(this.ship); return false;});
-    key("left", function(){ this.ship.turnLeft.bind(this.ship); return false;});
-    key("right", function(){ this.ship.turnRight.bind(this.ship); return false;});
+    
+    key("up", function(){ game.ship.power.bind(game.ship); return false;});
+    key("down", function(){ game.ship.brake.bind(game.ship); return false;});
+    key("left", function(){ game.ship.turnLeft.bind(game.ship); return false;});
+    key("right", function(){ game.ship.turnRight.bind(game.ship); return false;});
     key("space", function(){ game.fireBullet.bind(game); return false;});
+    
+    return false;
   }
 
   Game.prototype.fireBullet = function() {
