@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Douglas Teixeira"]
   s.email       = ["teixeir3@gmail.com"]
   s.homepage    = "http://www.DougTeixeira.com/asteroids"
-  s.summary     = "Javascript version of class Asteroids game. Designed to be included in the rails asset pipeline."
-  s.description = "Javascript version of class Asteroids game. Designed to be included in the rails asset pipeline."
+  s.summary     = "Javascript version of classic Asteroids game. Designed to be included in the rails asset pipeline."
+  s.description = "Javascript version of classic Asteroids game. Designed to be included in the rails asset pipeline."
   s.license     = "MIT"
 
   s.add_dependency "rails", "~> 4.2.1"
